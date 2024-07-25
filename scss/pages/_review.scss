@@ -1,0 +1,133 @@
+.review {
+    padding: 104px 0 52px;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        column-gap: 44px;
+    }
+
+    &__control {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+        border: 1.5px solid #ffd1c4;
+        background: transparent;
+        color: #ff5b2e;
+
+        &:hover {
+            color: #fff;
+            background: #ff5b2e;
+            border-color: #ff5b2e;
+            cursor: pointer;
+        }
+
+        &:nth-of-type(2){
+            margin-left: auto;
+        }
+    }
+
+    &__list{
+        display: flex;
+    }
+
+    &__content{
+        overflow: hidden;
+    }
+
+
+    &-item {
+        display: flex;
+        align-items: center;
+        column-gap: 115px;
+        flex-shrink: 0;
+        width: 100%;
+
+        &__media {
+            position: relative;
+            flex-shrink: 0;
+            margin-top: -52px;
+            width: 274px;
+            border-radius: 137px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                inset: auto 0 0 0;
+                height: 82%;
+                background: #ffda54;
+                border-radius: inherit;
+            }
+        }
+
+        &__content{
+            margin-top: 28px;
+        }
+
+        &__img {
+            position: relative;
+            z-index: 1;
+            display: block;
+            width: 100%;
+            border-radius: inherit;
+        }
+
+        &__quote {
+            margin-top: 24px;
+            width: 553px;
+            color: #000;
+            font-family: Poppins;
+            font-size: 1.8rem;
+
+            font-weight: 400;
+            line-height: 155.556%;
+        }
+
+        &__author {
+            display: flex;
+            align-items: center;
+            margin-top: 34px;
+            color: #282828;
+            font-family: Sora;
+            font-size: 1.8rem;
+
+            font-weight: 600;
+            line-height: 100%;
+
+            &:before{
+                content: "";
+                display: inline-block;
+                margin-right: 8px;
+                width: 20px;height: 2px;
+                border-radius: 1px;
+                background: #000;
+            }
+        }
+    }
+
+    &__dots{
+        margin-top: 56px;
+        display: flex;
+        justify-content: center;
+        column-gap: 8px;
+    }
+
+    &__dot{
+        width: 8px;height: 8px;border-radius: 4px;
+        border: 1px solid #ff5b2e;
+
+        &:hover{
+            background: #ff5b2e;
+            cursor: pointer;
+        }
+
+        &--active{
+            width: 24px;
+            background: #ff5b2e;
+        }
+    }
+}

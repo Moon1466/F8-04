@@ -1,0 +1,19 @@
+.nav{
+
+    &__list{
+        display: flex;
+    }
+
+    &__link, .header-action__link {
+        padding: 8px 18px;
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 1;
+        color: #5e6085;
+
+        &:hover{
+            color: #000958;
+            text-shadow: 1px 0 0 currentColor;
+        }
+    }
+}

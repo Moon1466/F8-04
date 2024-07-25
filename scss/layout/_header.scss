@@ -1,0 +1,29 @@
+.header {
+    padding: 26px 0;
+    
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+
+}
+
+
+.header-action{
+
+    &__link {
+        padding: 8px 18px;
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 1;
+        color: #5e6085;
+    }
+
+    &__btn{
+        --height: 50px;
+        min-width: 118px;
+
+    }
+}

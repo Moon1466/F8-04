@@ -1,0 +1,165 @@
+.pricing {
+    padding: 86px 0;
+    background: #fff6ed;
+
+    &__container{
+        max-width: 994px;
+    }
+    &__heading,
+    &__desc {
+        text-align: center;
+    }
+
+    &__desc {
+        width: 799px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__switch-wrap {
+        margin-top: 38px;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__switch-label {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 276px;
+        height: 56px;
+        padding: 0 40px;
+        border: 1px solid #ff5b2999;
+        border-radius: 99px;
+        cursor: pointer;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 140px;
+            height: 100%;
+            background: #ff5b29;
+            border-radius: inherit;
+        }
+    }
+
+    &__switch-value {
+        position: relative;
+        z-index: 1;
+        color: #fff;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 1.6rem;
+
+        font-weight: 500;
+        line-height: 100%;
+    }
+
+    &__switch-input:checked + &__switch-label:before {
+        width: 131px;
+        left: auto;
+        right: 0;
+    }
+
+    &__switch-input:not(:checked) + &__switch-label &__switch-value:nth-of-type(2),
+    &__switch-input:checked + &__switch-label &__switch-value:nth-of-type(1) {
+        color: #ff5b29;
+    }
+
+    &__switch-inner {
+        position: relative;
+    }
+
+    &__sale-off {
+        position: absolute;
+        top: -10px;
+        right: -112px;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 44px;
+        margin-top: 56px;
+    }
+
+    &-item {
+        padding: 30px 28px;
+        border-radius: 20px;
+        background: #fff;
+
+        &--active{
+            box-shadow: 0px 20px 44px 0px rgba(195, 108, 22, 0.06);
+        }
+
+        &__type {
+            color: #ff5b2e;
+            font-family: Poppins;
+            font-size: 1.2rem;
+
+            font-weight: 400;
+            line-height: 100%;
+        }
+
+        &__heading {
+            margin-top: 8px;
+            color: #3f4065;
+            font-family: Sora;
+            font-size: 1.8rem;
+
+            font-weight: 600;
+            line-height: 100%;
+        }
+
+        &__price {
+            margin-top: 24px;
+            color: #000958;
+            font-family: Sora;
+            font-size: 3.3rem;
+
+            font-weight: 700;
+            line-height: 103.03%;
+        }
+
+        &__btn {
+            --height: 44px;
+            margin-top: 22px;
+            width: 100%;
+
+            border: 1px solid rgba(255, 91, 46, 0.6);
+            color: #ff5b29;
+            background: transparent;
+        }
+
+        &__list {
+            margin-top: 24px;
+        }
+
+        &__item {
+            display: flex;
+            margin-top: 18px;
+            color: #656689;
+            font-family: Poppins;
+            font-size: 1.4rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 100%;
+
+            &::before{
+                content: url(../../assets/img/icon/Check__2.svg);
+                margin-right: 14px;
+            }
+
+            &--disabled::before{
+                opacity: 0.4;
+            }
+
+
+        }
+
+        
+    }
+}

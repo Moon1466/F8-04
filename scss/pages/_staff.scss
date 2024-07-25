@@ -1,0 +1,138 @@
+.staff {
+    padding: 130px 0;
+
+    &__desc,
+    &__heading {
+        text-align: center;
+    }
+
+    &__desc {
+        color: #5e6085;
+        text-align: center;
+        font-family: Sora;
+        font-size: 1.6rem;
+
+        font-weight: 600;
+        line-height: 100%;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 35px;
+        margin-top: 45px;
+    }
+
+    &-item {
+        text-align: center;
+
+        &__img-wrap {
+            position: relative;
+            margin: 0 16px;
+            border-radius: 130px;
+        
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 94%;
+                border-radius: inherit;
+                background: linear-gradient(180deg, #90ccff 0%, #59a8eb 95.96%);
+                
+            }
+
+            &::after{
+                content: "";
+                position: absolute;
+                left: 50%;bottom: 0;
+                transform: translateX(-50%);
+                width: calc(100% + 36px);
+                height: 100%;
+                background-repeat: no-repeat;
+                background-position: bottom;
+                background-size: 100%;
+            }
+
+         
+        }
+
+        &:nth-child(1) &__img-wrap::after{
+            background-image: url(../../assets/img/icon/staff_01.svg);
+        }
+
+        &:nth-child(2) &__img-wrap::before{
+            background: linear-gradient(180deg, #FF997E 0%, #F3752E 100%);
+
+        }
+        
+        &:nth-child(2) &__img-wrap::after{
+            background-image: url(../../assets/img/icon/staff_02.svg);
+        }
+
+        &:nth-child(3) &__img-wrap::before{
+            background: linear-gradient(180deg, #FABF3E 0%, #FFA14A 100%);
+
+        }
+        
+        &:nth-child(3) &__img-wrap::after{
+            background-image: url(../../assets/img/icon/staff_03.svg);
+        }
+
+        &:nth-child(4) &__img-wrap::before{
+            background: linear-gradient(180deg, #5BD6E2 0%, #00A7CC 100%);
+
+        }
+        
+        &:nth-child(4) &__img-wrap::after{
+            background-image: url(../../assets/img/icon/staff_04.svg);
+        }
+
+        &:nth-child(even) &__img-wrap::after{
+           background-position: 0 16px;
+        }
+
+        &__img {
+            position: relative;
+            display: block;
+            z-index: 1;
+            width: 100%;
+            border-radius: inherit;
+        }
+
+        &__title {
+            margin-top: 34px;
+            color: #656689;
+
+            font-family: Poppins;
+            font-size: 1.4rem;
+
+            line-height: 100%;
+        }
+
+        &__name {
+            margin-top: 24px;
+            color: #000958;
+    
+            font-family: Sora;
+            font-size: 2.2rem;
+
+            font-weight: 600;
+            line-height: 100%;
+        }
+    }
+
+    &__cta-wrap{
+        display: flex;
+        justify-content: center;
+        margin-top: 48px;
+    }
+
+    &__cta{
+            min-width: 193px;
+            color: var(--primary-color);
+            border-color: currentColor;
+    }
+}
